@@ -1,0 +1,173 @@
+html {
+  box-sizing: border-box;
+  font-family: $font-primary;
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: $regular-size;
+  color: $black;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: $bold;
+  margin: 0.8rem 0;
+  @include until($tablet) {
+    text-align: center;
+  }
+}
+
+h1 {
+  font-size: $big-title-size;
+  line-height: $big-title-size + $global-rythm;
+  @include until($tablet) {
+    font-size: $regular-title-size;
+    line-height: $big-title-size - $global-rythm;
+  }
+}
+
+h2 {
+  font-size: $regular-title-size;
+  line-height: $small-title-size + 2rem;
+  @include until($tablet) {
+    font-size: $small-title-size;
+    line-height: $medium-size + 2rem;
+  }
+}
+h3 {
+  font-size: $small-title-size;
+  line-height: $small-title-size + $global-rythm;
+  @include until($tablet) {
+    font-size: $medium-size + $radius;
+    line-height: $medium-size + 0.4rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.space {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  z-index: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  min-width: 32rem;
+  flex-wrap: wrap;
+  @include until(1420px) {
+    overflow: hidden;
+  }
+  &__main {
+    @extend .container;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 144rem;
+
+    @include tablet {
+      padding: 0.8rem;
+      width: 100%;
+    }
+  }
+
+}
+
+.irow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  overflow-wrap: break-word;
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.right {
+    justify-content: flex-end;
+  }
+
+  &.md {
+    width: 48%;
+  }
+  &.sm {
+    width: 32%;
+  }
+  &.xcenter {
+    align-items: center;
+  }
+
+  &.sm,
+  &.md {
+    @include until($tablet) {
+      width: 100%;
+    }
+  }
+
+  &.globalmargin {
+    margin: 4rem 0;
+    &.extratop {
+      @include from($tablet) {
+        margin-top: 16rem;
+      }
+    }
+  }
+}
+
+.icol {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: auto;
+  width: 100%;
+  overflow-wrap: break-word;
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.bottom {
+    justify-content: flex-end;
+  }
+
+  &.md {
+    width: 48%;
+  }
+  &.sm {
+    width: 32.666%;
+  }
+}
+
+[v-cloak] {
+  display: none;
+}
+
+

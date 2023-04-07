@@ -1,13 +1,13 @@
 
 <template>
-  <div class="irow">
+  <div class="irow main-head">
     <h1>Generate an Image</h1>
   </div>
   <div class="irow">
     <radio-option-group
       :options="[
-        { label: 'Option 1', value: 'option1' },
-        { label: 'Option 2', value: 'option2' },
+        { label: 'Select an Existing Model', value: 'option1' },
+        { label: 'Create Your Own', value: 'option2' },
       ]"
       name="option"
       v-model="form.sampleRadio"
@@ -25,3 +25,9 @@ const form = reactive({
   samplePreSelectedRadio: "option2",
 });
 </script>
+
+<style lang="scss" scoped>
+  .main-head {
+    margin: 34px 0;
+  }
+</style>

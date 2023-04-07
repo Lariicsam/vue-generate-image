@@ -6,7 +6,6 @@
       :textLabel="option.label"
       :value="option.value"
       :name="name"
-
       @update:modelValue="updateInput"
     />
   </div>

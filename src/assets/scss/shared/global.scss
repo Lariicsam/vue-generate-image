@@ -30,25 +30,25 @@ h3 {
 }
 
 h1 {
-  font-size: $big-title-size;
-  line-height: $big-title-size + $global-rythm;
+  font-size: $h1-size;
+  line-height: $h1-size + $global-rythm;
   @include until($tablet) {
-    font-size: $regular-title-size;
-    line-height: $big-title-size - $global-rythm;
+    font-size: $h1-size-mobile;
+    line-height: $h1-size - $global-rythm;
   }
 }
 
 h2 {
-  font-size: $regular-title-size;
-  line-height: $small-title-size + 2rem;
+  font-size: $h1-size-mobile;
+  line-height: $h2-size + 2rem;
   @include until($tablet) {
-    font-size: $small-title-size;
+    font-size: $h2-size;
     line-height: $medium-size + 2rem;
   }
 }
 h3 {
-  font-size: $small-title-size;
-  line-height: $small-title-size + $global-rythm;
+  font-size: $h2-size;
+  line-height: $h2-size + $global-rythm;
   @include until($tablet) {
     font-size: $medium-size + $radius;
     line-height: $medium-size + 0.4rem;
@@ -79,13 +79,13 @@ h3 {
   @include until(1420px) {
     overflow: hidden;
   }
-  &__main {
+  &--main {
     @extend .container;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 144rem;
+    max-width: 134.6rem;
 
     @include tablet {
       padding: 0.8rem;

@@ -9,17 +9,17 @@ $font-primary: Arial, sans-serif;
 $small-size: 1.4rem;
 $medium-size: 1.6rem;
 $regular-size: 1.8rem;
-$big-title-size: 6.4rem;
-$regular-title-size: 4rem;
-$small-title-size: 2.8rem;
+$h1-size: 3rem;
+$h1-size-mobile: 2.4rem;
+$h2-size: 2.4rem;
 
 //Colors
 $sunglow: #ffc835;
-$accent: #6514d7;
+$accent: #1035ae;
+$accent-lite: #efeff9;
 $black: #1e1e1e;
 $white: #ffffff;
-
-
+$grey-border: #c5c5c5;
 
 //Breakpoints
 $large: 100%;
@@ -27,7 +27,6 @@ $medium: 48%;
 $small: 31%;
 $maxwidth-containner: 1440px;
 $maxwidth-inner-containner: 1280px;
-
 
 //responsive
 $mobile: 648px !default;

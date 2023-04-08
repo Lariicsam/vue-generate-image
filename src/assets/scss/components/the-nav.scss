@@ -1,0 +1,33 @@
+.thenav {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  list-style-type: none;
+
+  &--item {
+    display: flex;
+    column-gap: 36px;
+    height: auto;
+    width: 100%;
+  }
+  &--link {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: $semibold;
+    color: #010101;
+    text-decoration: none;
+    line-height: 19px;
+    position: relative;
+    &.selected {
+      &::after {
+        content: "";
+        height: 0.4rem;
+        background-color: #010101;
+        width: 100%;
+        position: absolute;
+        top: 6rem;
+        left: 0;
+      }
+    }
+  }
+}

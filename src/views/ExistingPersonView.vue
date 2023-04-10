@@ -1,6 +1,11 @@
 <template>
-  <div class="irow margin--step">
-    <h2>STEP 1: <span>Choose your model</span></h2>
+  <div class="icol margin--step">
+    <div class="irow">
+      <h2>STEP 1: <span>Choose your model</span></h2>
+    </div>
+    <div class="irow">
+      <!-- <the-dropdown :options="shotData" /> -->
+    </div>
   </div>
 
   <div class="irow margin--step">
@@ -11,6 +16,24 @@
     <h2>STEP 3: <span>Choose your styles</span></h2>
   </div>
 </template>
+<script setup>
+import TheDropdown from "../components/TheDropdown.vue";
+
+const shotData = [
+  {
+    text: "Close-up",
+    value: "close-up",
+  },
+  {
+    text: "Eye-level",
+    value: "eye-level",
+  },
+  {
+    text: "Low-angle",
+    value: "low-angle",
+  },
+];
+</script>
 <style lang="scss" scoped>
   h2 {
     & > span {
@@ -22,3 +45,4 @@
     margin: 25px 0 7px;
   }
 </style>
+

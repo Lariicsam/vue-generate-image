@@ -20,6 +20,7 @@ import { reactive } from "vue";
 import ExistingPersonView from "./ExistingPersonView.vue";
 import RadioOptionGroup from "../components/RadioOptionGroup.vue";
 
+
 const form = reactive({
   sampleRadio: "",
   samplePreSelectedRadio: "option2",

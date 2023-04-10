@@ -24,7 +24,6 @@ h2,
 h3 {
   font-weight: $bold;
   margin: 0;
-
 }
 
 h1 {
@@ -85,12 +84,15 @@ h3 {
     width: 100%;
     max-width: 134.6rem;
 
+    @include until(1386px) {
+      padding: 0 15px 50px;
+    }
+
     @include tablet {
       padding: 0.8rem;
       width: 100%;
     }
   }
-
 }
 
 .irow {
@@ -167,5 +169,3 @@ h3 {
 [v-cloak] {
   display: none;
 }
-
-

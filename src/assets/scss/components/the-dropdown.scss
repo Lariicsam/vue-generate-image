@@ -1,6 +1,9 @@
 .dropdown {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 30px 0 10px;
   width: auto;
   min-width: 124px;
   height: 100%;
@@ -59,7 +62,7 @@
       background-color: #efeff9;
   }
 
-  &:hover .gdropdown-content {
+  &:hover .dropdown-content {
       display: flex;
   }
 

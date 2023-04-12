@@ -19,11 +19,11 @@
 <script>
 export default {
   name: "TheDropdown",
-  inheritAttrs: true,
+  inheritAttrs: false,
 };
 </script>
 <script setup>
-import { computed } from "vue";
+const selected = "";
 const props = defineProps({
   options: {
     type: Array,
@@ -43,17 +43,7 @@ const props = defineProps({
   },
 });
 
-const selected = computed({
-  get: () => {
-    if (this.value !== undefined) {
-      return this.value;
-    } else {
-      return "select an option";
-    }
-  },
-
-  set: () => {
-    return;
-  },
-});
+const onChange = (value) => {
+  console.log("selected", value);
+};
 </script>

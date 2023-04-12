@@ -4,7 +4,7 @@
       <h2>STEP 1: <span>Choose your model</span></h2>
     </div>
     <div class="irow">
-      <!-- <the-dropdown :options="shotData" /> -->
+      <the-dropdown :options="shotData" />
     </div>
   </div>
 
@@ -18,7 +18,7 @@
 
 </template>
 <script setup>
-
+import TheDropdown from '../components/TheDropdown.vue';
 const shotData = [
   {
     text: "Close-up",

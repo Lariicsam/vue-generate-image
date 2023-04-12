@@ -14,17 +14,22 @@
     />
   </div>
   <ExistingPersonView />
+
+  <div class="irow margin--step">
+    <the-button text="Generate" />
+  </div>
 </template>
 <script setup>
 import { reactive } from "vue";
+import TheButton from "../components/TheButton.vue";
 import ExistingPersonView from "./ExistingPersonView.vue";
 import RadioOptionGroup from "../components/RadioOptionGroup.vue";
-
 
 const form = reactive({
   sampleRadio: "",
   samplePreSelectedRadio: "option2",
 });
+
 </script>
 
 <style lang="scss" scoped>

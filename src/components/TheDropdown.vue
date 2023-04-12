@@ -19,7 +19,7 @@
 <script>
 export default {
   name: "TheDropdown",
-  inheritAttrs: false,
+  inheritAttrs: true,
 };
 </script>
 <script setup>

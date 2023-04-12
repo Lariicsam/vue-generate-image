@@ -15,9 +15,9 @@
   <div class="irow margin--step">
     <h2>STEP 3: <span>Choose your styles</span></h2>
   </div>
+
 </template>
 <script setup>
-import TheDropdown from "../components/TheDropdown.vue";
 
 const shotData = [
   {

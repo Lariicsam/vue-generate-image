@@ -3,23 +3,26 @@
     <div class="irow">
       <h2>STEP 1: <span>Choose your model</span></h2>
     </div>
-    <div class="irow md between">
-      <the-dropdown :options="shotData" />
-      <the-dropdown :options="orientationData" />
+    <div class="irow">
+      <radio-image textLabel="Person1" />
     </div>
   </div>
 
-  <div class="irow margin--step">
+  <div class="icol margin--step">
     <h2>STEP 2: <span>Set image dimensions</span></h2>
+    <div class="irow md between">
+      <the-dropdown :options="shotData" dropdownName="Shot" />
+      <the-dropdown :options="orientationData" dropdownName="Orientation" />
+    </div>
   </div>
 
   <div class="irow margin--step">
     <h2>STEP 3: <span>Choose your styles</span></h2>
   </div>
-
 </template>
 <script setup>
-import TheDropdown from '../components/TheDropdown.vue';
+import TheDropdown from "../components/TheDropdown.vue";
+import RadioImage from "../components/RadioImage.vue";
 const shotData = [
   {
     text: "Close-up",

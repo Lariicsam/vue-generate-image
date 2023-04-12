@@ -10,76 +10,76 @@
   position: relative;
 
   &-btn {
-      background-color: #ffffff;
-      border: 1px solid #1035ae;
-      border-radius: 4px;
-      color: #000000;
-      padding: 0 30px 0 12px;
-      font-size: 16px;
-      height: 36px;
-      position: relative;
+    background-color: #ffffff;
+    border: 1px solid #1035ae;
+    border-radius: 4px;
+    color: #000000;
+    padding: 0 30px 0 12px;
+    font-size: 16px;
+    height: 36px;
+    position: relative;
 
-      &::after {
-          content: "";
-          @include icon("triangle", "#010101");
-          background-size: contain;
-          background-position: center;
-          width: 12px;
-          height: 10px;
-          position: absolute;
-          top: 12px;
-          right: 12px;
-      }
+    &::after {
+      content: "";
+      @include icon("triangle", "#010101");
+      background-size: contain;
+      background-position: center;
+      width: 12px;
+      height: 10px;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+    }
   }
 
   &-content {
-      background-color: #ffffff;
-      border: 1px solid #1035ae;
-      flex-direction: column;
-      width: 100%;
-      height: auto;
-      position: absolute;
-      top: 35px;
-      left: 0;
-      z-index: 1;
-      display: none;
+    background-color: #ffffff;
+    border: 1px solid #1035ae;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 1;
+    display: none;
   }
 
   &-content a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: black;
-      font-size: 16px;
-      line-height: 16px;
-      text-decoration: none;
-      font-weight: 500;
-      height: auto;
-      min-height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    height: auto;
+    min-height: 36px;
   }
 
   &-content a:hover {
-      background-color: #efeff9;
+    background-color: #efeff9;
   }
 
   &:hover .dropdown-content {
-      display: flex;
+    display: flex;
   }
 
-  &-wrapper {
-      margin: 12px 30px 12px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: auto;
-      height: auto;
+  &--wrapper {
+    margin: 12px 30px 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
   }
-  &-label {
-      margin: 0 14px 0 0;
-      line-height: 16px;
-      font-size: 16px;
-      font-weight: 500;
-      color: #000000;
+  &--label {
+    margin: 0 14px 0 0;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
   }
   &__container {
     background-color: #fff;
@@ -93,5 +93,5 @@
     justify-content: center;
     align-items: center;
     width: 160px;
-}
+  }
 }

@@ -1,19 +1,22 @@
 <template>
-  <div class="dropdown__container">
-    <select
-      class="dropdown"
-      :name="name"
-      v-model="selected"
-      @change="onChange($event.target.value)"
-    >
-      <option
-        v-for="option in options"
-        :value="option.value"
-        :key="option.value"
+  <div class="dropdown--wrapper">
+    <span class="dropdown--label">{{ dropdownName }}</span>
+    <div class="dropdown__container">
+      <select
+        class="dropdown"
+        :name="name"
+        v-model="selected"
+        @change="onChange($event.target.value)"
       >
-        {{ option.text }}
-      </option>
-    </select>
+        <option
+          v-for="option in options"
+          :value="option.value"
+          :key="option.value"
+        >
+          {{ option.text }}
+        </option>
+      </select>
+    </div>
   </div>
 </template>
 <script>
@@ -23,6 +26,7 @@ export default {
 };
 </script>
 <script setup>
+import { computed } from "vue";
 const selected = "";
 const props = defineProps({
   options: {
@@ -41,7 +45,12 @@ const props = defineProps({
     type: String,
     default: "dropdown Name",
   },
+  dropdownName: {
+    type: String,
+    default: "Drop Name",
+  },
 });
+
 
 const onChange = (value) => {
   console.log("selected", value);

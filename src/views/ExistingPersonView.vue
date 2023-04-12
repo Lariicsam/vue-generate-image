@@ -3,8 +3,9 @@
     <div class="irow">
       <h2>STEP 1: <span>Choose your model</span></h2>
     </div>
-    <div class="irow">
+    <div class="irow md between">
       <the-dropdown :options="shotData" />
+      <the-dropdown :options="orientationData" />
     </div>
   </div>
 
@@ -20,6 +21,21 @@
 <script setup>
 import TheDropdown from '../components/TheDropdown.vue';
 const shotData = [
+  {
+    text: "Close-up",
+    value: "close-up",
+  },
+  {
+    text: "Eye-level",
+    value: "eye-level",
+  },
+  {
+    text: "Low-angle",
+    value: "low-angle",
+  },
+];
+
+const orientationData = [
   {
     text: "Close-up",
     value: "close-up",

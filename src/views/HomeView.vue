@@ -36,4 +36,7 @@ const form = reactive({
   .main-head {
     margin: 34px 0;
   }
+  .margin--step {
+    margin: 25px 0 7px;
+  }
 </style>

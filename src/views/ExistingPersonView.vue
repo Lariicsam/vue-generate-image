@@ -4,7 +4,7 @@
       <h2>STEP 1: <span>Choose your model</span></h2>
     </div>
     <div class="irow">
-      <radio-image textLabel="Person1" />
+      <radio-image textLabel="Person1" value="p1"/>
     </div>
   </div>
 

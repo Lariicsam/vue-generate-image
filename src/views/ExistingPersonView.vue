@@ -9,8 +9,11 @@
     </div>
   </div>
 
-  <div class="irow margin--step">
+  <div class="icol margin--step">
     <h2>STEP 2: <span>Set image dimensions</span></h2>
+    <div class="irow">
+      <horizontal-scroll></horizontal-scroll>
+    </div>
   </div>
 
   <div class="irow margin--step">
@@ -19,6 +22,7 @@
 
 </template>
 <script setup>
+import HorizontalScroll from '../components/HorizontalScroll.vue';
 import TheDropdown from '../components/TheDropdown.vue';
 const shotData = [
   {

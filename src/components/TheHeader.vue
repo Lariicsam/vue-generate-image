@@ -1,6 +1,7 @@
 <template>
   <header class="header--wrapper">
     <div class="header">
+      <div class="header--burger"></div>
       <div class="header--logo"></div>
       <div class="header--navigation">
         <the-nav :items="navigationData" />

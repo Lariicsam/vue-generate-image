@@ -1,7 +1,7 @@
 <template>
   <header class="header--wrapper">
     <div class="header">
-      <div class="header--burger"></div>
+      <div class="header--burger" @click="toggleMenu()"></div>
       <div class="header--logo"></div>
       <div class="header--navigation">
         <the-nav :items="navigationData" />
@@ -35,4 +35,8 @@ const navigationData = [
     id: "nav4",
   },
 ];
+
+const toggleMenu = () => {
+  console.log("menu");
+};
 </script>

@@ -1,9 +1,9 @@
 <template>
   <ul class="thenav">
-    <li class="thenav--item">
-      <a class="thenav--link selected" href="">Generate</a>
-      <a class="thenav--link" href="">My Images</a>
-      <a class="thenav--link" href="">Favorites</a>
+    <li class="thenav--item" v-for="item in items" :key="item.id">
+      <a class="thenav--link" :href="item.link">
+        {{ item.text }}
+      </a>
     </li>
   </ul>
 </template>
@@ -15,6 +15,10 @@ export default {
 </script>
 <script setup>
 const props = defineProps({
+  items: {
+    type: Array,
+    required: true,
+  },
   text: {
     type: String,
     default: "",

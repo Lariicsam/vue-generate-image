@@ -23,15 +23,27 @@
   <div class="icol margin--step">
     <h2>STEP 3: <span>Choose your styles</span></h2>
     <div class="irow">
-      <the-dropdown :options="shotData" dropdownName="Shot" />
-      <the-dropdown :options="orientationData" dropdownName="Orientation" />
+      <the-grid
+        columns="1fr 1fr 1fr 1fr"
+        columnGap="1%"
+        columnRow="1.6rem"
+        :breakPointTablet="1025"
+        colsForTablet="1fr 1fr 1fr"
+        :breakPointMobile="475"
+        colsForMobile="1fr"
+      >
+        <the-dropdown :options="shotData" dropdownName="Shot" />
+        <the-dropdown :options="orientationData" dropdownName="Orientation" />
+      </the-grid>
     </div>
   </div>
 </template>
 <script setup>
-import RadioImage from "../components/RadioImage.vue";
 import HorizontalScroll from "../components/HorizontalScroll.vue";
+import RadioImage from "../components/RadioImage.vue";
 import TheDropdown from "../components/TheDropdown.vue";
+import TheGrid from "../components/TheGrid.vue";
+
 const shotData = [
   {
     text: "Close-up",

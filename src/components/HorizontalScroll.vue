@@ -23,7 +23,7 @@ export default {
     scrollLeft: function () {
       const menu = this.$refs.menu;
       menu.scrollTo({
-        left: (this.scrollAmount += 300),
+        left: (this.scrollAmount += 400),
         behavior: "smooth",
       });
     },
@@ -31,7 +31,7 @@ export default {
     scrollRight: function () {
       const menu = this.$refs.menu;
       menu.scrollTo({
-        left: (this.scrollAmount -= 300),
+        left: (this.scrollAmount -= 400),
         behavior: "smooth",
       });
     },

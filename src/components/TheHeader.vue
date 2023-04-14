@@ -28,5 +28,10 @@ const navigationData = [
     link: "#",
     id: "nav3",
   },
+  {
+    text: "Top Creators",
+    link: "#",
+    id: "nav4",
+  },
 ];
 </script>

@@ -9,90 +9,93 @@
   -webkit-overflow-scrolling: touch;
   position: relative;
   @include until(1025px) {
-      overflow-x: auto;
+    overflow-x: auto;
   }
   @include mobile {
-      margin: 0;
+    margin: 0;
   }
 
   &-wrapper {
-      width: 100%;
-      max-width: 1250px;
-      height: auto;
-      margin: 0 auto;
-      position: relative;
-      padding: 0;
-      @include until(1280px) {
-          max-width: calc(100vw - 134px);
-          margin: 0 16px;
-      }
+    width: 100%;
+    max-width: 1250px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    @include until(1280px) {
+      max-width: calc(100vw - 134px);
+      margin: 0 16px 0 32px;
+    }
 
-      @include until(1025px) {
-          margin: 0;
-      }
+    @include until(1025px) {
+        margin: 0 16px;
+    }
 
-      @include mobile {
-          max-width: calc(100vw - 80px);
-          margin: 0;
-      }
+    @include mobile {
+      max-width: calc(100vw - 80px);
+    }
   }
 
   &-container {
-      width: 100%;
-      height: auto;
-      margin: 0 auto;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      position: relative;
-      padding: 0;
-      @include until(1025px) {
-          overflow-x: auto;
-      }
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    padding: 0;
+    @include until(1025px) {
+      overflow-x: auto;
+    }
   }
 
   &-paddles {
-      height: 32px;
-      width: 100%;
-      @include mobile {
-          display: none;
-      }
+    display: block;
+    height: 32px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include tablet {
+      display: none;
+    }
   }
 
   &-paddle {
-      position: absolute;
-      top: 46px;
-      bottom: 0;
-      width: 24;
-      z-index: 2;
-      color: blueviolet;
-      font-size: 40px;
-      font-weight: 700;
-      height: 100%;
+    position: absolute;
+    top: 46px;
+    bottom: 0;
+    width: 24px;
+    z-index: 2;
+    color: blueviolet;
+    font-size: 40px;
+    font-weight: 700;
+    height: 100%;
   }
 
   &-paddles-left {
-      @include icon("arrow-left", "#c5c5c5");
-      display: flex;
-      background-size: contain;
-      background-position: center;
-      width: 11px;
-      height: 20px;
-      left: -20px;
+    @include icon("arrow-left", "#c5c5c5");
+    display: flex;
+    background-size: contain;
+    background-position: center;
+    width: 11px;
+    height: 20px;
+    left: -20px;
   }
 
   &-paddles-right {
-      right: -20px;
-      @include icon("arrow-left", "#c5c5c5");
-      display: flex;
-      background-size: contain;
-      background-position: center;
-      width: 11px;
-      height: 20px;
-      transform: rotate(180deg);
+    right: -20px;
+    @include icon("arrow-left", "#c5c5c5");
+    display: flex;
+    background-size: contain;
+    background-position: center;
+    width: 11px;
+    height: 20px;
+    transform: rotate(180deg);
   }
 
   &-paddles-left:hover,
   &-paddles-right:hover {
-      cursor: pointer;
+    cursor: pointer;
   }
 }

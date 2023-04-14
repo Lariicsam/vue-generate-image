@@ -5,9 +5,15 @@
         <slot></slot>
       </div>
     </div>
-    <div class="paddles">
-      <div class="hscroller-paddles-left hscroller-paddle" @click="scrollRight"></div>
-      <div class="hscroller-paddles-right hscroller-paddle" @click="scrollLeft"></div>
+    <div class="hscroller-paddles">
+      <div
+        class="hscroller-paddles-left hscroller-paddle"
+        @click="scrollRight"
+      ></div>
+      <div
+        class="hscroller-paddles-right hscroller-paddle"
+        @click="scrollLeft"
+      ></div>
     </div>
   </div>
 </template>

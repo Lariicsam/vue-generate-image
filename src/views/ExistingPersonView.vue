@@ -29,7 +29,7 @@
         columnRow="1.6rem"
         :breakPointTablet="1025"
         colsForTablet="1fr 1fr 1fr"
-        :breakPointMobile="475"
+        :breakPointMobile="560"
         colsForMobile="1fr"
       >
         <the-dropdown :options="shotData" dropdownName="Shot" />

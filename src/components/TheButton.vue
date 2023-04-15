@@ -20,7 +20,9 @@ const props = defineProps({
   },
 });
 
+const emit = defineEmits(["onClick"]);
+
 const onClick = () => {
-  console.log("clic");
+  emit("onClick");
 };
 </script>

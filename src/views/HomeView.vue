@@ -19,16 +19,17 @@
   <ExistingPersonView />
   <teleport to="body">
     <the-modal
+      :showModal="isShow"
       title="Generating Your Image"
       description="This may take up to a minute."
     ></the-modal>
   </teleport>
   <div class="irow margin--step">
-    <the-button text="Generate" />
+    <the-button text="Generate" @onClick="showModal" />
   </div>
 </template>
 <script setup>
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 import ExistingPersonView from "./ExistingPersonView.vue";
 import RadioOptionGroup from "../components/RadioOptionGroup.vue";
 import TheButton from "../components/TheButton.vue";
@@ -39,6 +40,16 @@ const form = reactive({
   sampleRadio: "",
   samplePreSelectedRadio: "option2",
 });
+
+let isShow = ref(false);
+
+const showModal = () => {
+  isShow = true;
+  setTimeout(() => {
+    isShow = false;
+  }, 3000);
+  console.log("modla");
+};
 </script>
 
 <style lang="scss" scoped>

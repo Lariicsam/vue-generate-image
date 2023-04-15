@@ -26,7 +26,6 @@ export default {
 };
 </script>
 <script setup>
-import { computed } from "vue";
 const selected = "";
 const props = defineProps({
   options: {

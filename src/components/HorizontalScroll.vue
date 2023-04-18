@@ -6,14 +6,8 @@
       </div>
     </div>
     <div class="hscroller-paddles">
-      <div
-        class="hscroller-paddles-left hscroller-paddle"
-        @click="scrollRight"
-      ></div>
-      <div
-        class="hscroller-paddles-right hscroller-paddle"
-        @click="scrollLeft"
-      ></div>
+      <div class="hscroller-paddles-left hscroller-paddle" @click="scrollRight"></div>
+      <div class="hscroller-paddles-right hscroller-paddle" @click="scrollLeft"></div>
     </div>
   </div>
 </template>
@@ -22,7 +16,7 @@
 export default {
   data() {
     return {
-      scrollAmount: 0,
+      scrollAmount: 0
     };
   },
   methods: {
@@ -30,7 +24,7 @@ export default {
       const menu = this.$refs.menu;
       menu.scrollTo({
         left: (this.scrollAmount += 400),
-        behavior: "smooth",
+        behavior: "smooth"
       });
     },
 
@@ -38,10 +32,10 @@ export default {
       const menu = this.$refs.menu;
       menu.scrollTo({
         left: (this.scrollAmount -= 400),
-        behavior: "smooth",
+        behavior: "smooth"
       });
-    },
-  },
+    }
+  }
 };
 </script>
 

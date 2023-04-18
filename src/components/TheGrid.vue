@@ -2,8 +2,7 @@
   <div
     class="thegrid"
     ref="theGrid"
-    :style="`grid-template-columns:${columnsSize};grid-column-gap:${columnGap};grid-row-gap:${columnRow};margin:${margin}`"
-  >
+    :style="`grid-template-columns:${columnsSize};grid-column-gap:${columnGap};grid-row-gap:${columnRow};margin:${margin}`">
     <slot></slot>
   </div>
 </template>
@@ -14,46 +13,46 @@ export default {
   props: {
     columns: {
       type: String,
-      default: "repeat(3,1fr)",
+      default: "repeat(3,1fr)"
     },
     columnGap: {
       type: String,
-      default: "0.8rem",
+      default: "0.8rem"
     },
     columnRow: {
       type: String,
-      default: "0.8rem",
+      default: "0.8rem"
     },
     isResponsive: {
       type: Boolean,
-      default: true,
+      default: true
     },
     breakPointMobile: {
       type: Number,
-      default: 648,
+      default: 648
     },
     colsForMobile: {
       type: String,
-      default: "1fr",
+      default: "1fr"
     },
     breakPointTablet: {
       type: Number,
-      default: 1024,
+      default: 1024
     },
     colsForTablet: {
       type: String,
-      default: "repeat(3,1fr)",
+      default: "repeat(3,1fr)"
     },
     margin: {
       type: String,
-      default: "3.2rem 0",
-    },
+      default: "3.2rem 0"
+    }
   },
 
   data() {
     return {
       windowSize: document.documentElement.clientWidth,
-      columnsSize: this.columns,
+      columnsSize: this.columns
     };
   },
 
@@ -74,10 +73,7 @@ export default {
       const COLS_FOR_TABLET = this.colsForTablet;
       this.windowSize = document.documentElement.clientWidth;
       if (this.isResponsive) {
-        if (
-          this.windowSize < BREAKPOINT_TABLET &&
-          this.windowSize > BREAKPOINT_MOBILE
-        ) {
+        if (this.windowSize < BREAKPOINT_TABLET && this.windowSize > BREAKPOINT_MOBILE) {
           this.columnsSize = COLS_FOR_TABLET;
         } else if (this.windowSize < BREAKPOINT_MOBILE) {
           this.columnsSize = COLS_FOR_MOBILE;
@@ -85,7 +81,7 @@ export default {
           this.columnsSize = this.columns;
         }
       }
-    },
-  },
+    }
+  }
 };
 </script>

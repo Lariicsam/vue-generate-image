@@ -4,8 +4,7 @@
       <img
         src="https://access.staging3.fyf.com/images/fyf/personas/female-1b.jpg"
         class="gnrtimg-img"
-        alt="fyf"
-      />
+        alt="fyf" />
     </label>
     <input
       :id="state.uniqueId"
@@ -14,8 +13,7 @@
       type="radio"
       :value="value"
       class="gnrtimg-input"
-      @change="updateInput"
-    />
+      @change="updateInput" />
     <label :for="state.uniqueId" class="gnrtimg-label">
       <span class="gnrtimg-text">{{ textLabel }}</span>
     </label>
@@ -25,7 +23,7 @@
 <script>
 export default {
   name: "RadioImage",
-  inheritAttrs: false,
+  inheritAttrs: false
 };
 </script>
 <script setup>
@@ -35,20 +33,20 @@ const emit = defineEmits(["update:modelValue"]);
 const props = defineProps({
   textLabel: {
     type: String,
-    default: "",
+    default: ""
   },
   modelValue: {
     type: [String, Number],
-    default: "",
+    default: ""
   },
   value: {
     type: [String, Number],
-    required: true,
-  },
+    required: true
+  }
 });
 
 const state = reactive({
-  uniqueId: "",
+  uniqueId: ""
 });
 const updateInput = ($event) => {
   emit("update:modelValue", $event.target.value);

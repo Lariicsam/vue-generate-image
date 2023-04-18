@@ -6,13 +6,8 @@
         class="dropdown"
         :name="name"
         v-model="selected"
-        @change="onChange($event.target.value)"
-      >
-        <option
-          v-for="option in options"
-          :value="option.value"
-          :key="option.value"
-        >
+        @change="onChange($event.target.value)">
+        <option v-for="option in options" :value="option.value" :key="option.value">
           {{ option.text }}
         </option>
       </select>
@@ -22,7 +17,7 @@
 <script>
 export default {
   name: "TheDropdown",
-  inheritAttrs: false,
+  inheritAttrs: false
 };
 </script>
 <script setup>
@@ -30,26 +25,25 @@ const selected = "";
 const props = defineProps({
   options: {
     type: Array,
-    default: null,
+    default: null
   },
   text: {
     type: String,
-    default: "Select an Option",
+    default: "Select an Option"
   },
   id: {
     type: String,
-    default: "dropId",
+    default: "dropId"
   },
   name: {
     type: String,
-    default: "dropdown Name",
+    default: "dropdown Name"
   },
   dropdownName: {
     type: String,
-    default: "Drop Name",
-  },
+    default: "Drop Name"
+  }
 });
-
 
 const onChange = (value) => {
   console.log("selected", value);

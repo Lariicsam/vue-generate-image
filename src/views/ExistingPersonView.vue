@@ -5,12 +5,7 @@
     </div>
     <div class="irow">
       <horizontal-scroll>
-        <radio-image
-          textLabel="Person1"
-          :value="`p-${ele}`"
-          v-for="ele in 10"
-          :key="ele"
-        />
+        <radio-image textLabel="Person1" :value="`p-${ele}`" v-for="ele in 10" :key="ele" />
       </horizontal-scroll>
     </div>
   </div>
@@ -30,8 +25,7 @@
         :breakPointTablet="1025"
         colsForTablet="1fr 1fr 1fr"
         :breakPointMobile="560"
-        colsForMobile="1fr"
-      >
+        colsForMobile="1fr">
         <the-dropdown :options="shotData" dropdownName="Shot" />
         <the-dropdown :options="orientationData" dropdownName="Orientation" />
       </the-grid>
@@ -47,31 +41,31 @@ import TheGrid from "../components/TheGrid.vue";
 const shotData = [
   {
     text: "Close-up",
-    value: "close-up",
+    value: "close-up"
   },
   {
     text: "Eye-level",
-    value: "eye-level",
+    value: "eye-level"
   },
   {
     text: "Low-angle",
-    value: "low-angle",
-  },
+    value: "low-angle"
+  }
 ];
 
 const orientationData = [
   {
     text: "Close-up",
-    value: "close-up",
+    value: "close-up"
   },
   {
     text: "Eye-level",
-    value: "eye-level",
+    value: "eye-level"
   },
   {
     text: "Low-angle",
-    value: "low-angle",
-  },
+    value: "low-angle"
+  }
 ];
 </script>
 <style lang="scss" scoped>

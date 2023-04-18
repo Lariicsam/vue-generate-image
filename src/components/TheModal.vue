@@ -1,6 +1,5 @@
 <template>
   <div v-show="showModal" class="modal--background">
-    
     <div class="modal">
       <p class="modal--title mobile-only">{{ title }}</p>
       <div class="modal--spinner"></div>
@@ -15,10 +14,10 @@ const showModal = ref(false);
 
 const props = defineProps({
   title: {
-    type: String,
+    type: String
   },
   description: {
-    type: String,
-  },
+    type: String
+  }
 });
 </script>

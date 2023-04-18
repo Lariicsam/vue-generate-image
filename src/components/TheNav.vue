@@ -10,22 +10,22 @@
 <script>
 export default {
   name: "TheNav",
-  inheritAttrs: false,
+  inheritAttrs: false
 };
 </script>
 <script setup>
 const props = defineProps({
   items: {
     type: Array,
-    required: true,
+    required: true
   },
   text: {
     type: String,
-    default: "",
+    default: ""
   },
   link: {
     type: String,
-    default: "",
-  },
+    default: ""
+  }
 });
 </script>

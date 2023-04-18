@@ -6,36 +6,35 @@
       :textLabel="option.label"
       :value="option.value"
       :name="name"
-      @update:modelValue="updateInput"
-    />
+      @update:modelValue="updateInput" />
   </div>
 </template>
 
 <script>
 export default {
   name: "RadioOptionGroup",
-  inheritAttrs: false,
+  inheritAttrs: false
 };
 </script>
 
 <script setup>
-import RadioOption from './RadioOption.vue';
+import RadioOption from "./RadioOption.vue";
 
 const emit = defineEmits(["update:modelValue"]);
 
 const props = defineProps({
   options: {
     type: Array,
-    required: true,
+    required: true
   },
   name: {
     type: String,
-    required: true,
+    required: true
   },
   modelValue: {
     type: [String, Number],
-    required: true,
-  },
+    required: true
+  }
 });
 
 const updateInput = ($event) => {

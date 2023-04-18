@@ -7,17 +7,14 @@
       type="radio"
       :value="value"
       class="generatecheck-input"
-      @change="updateInput"
-    />
-    <label :for="state.uniqueId" class="generatecheck-label">{{
-      textLabel
-    }}</label>
+      @change="updateInput" />
+    <label :for="state.uniqueId" class="generatecheck-label">{{ textLabel }}</label>
   </div>
 </template>
 <script>
 export default {
   name: "RadioOption",
-  inheritAttrs: false,
+  inheritAttrs: false
 };
 </script>
 <script setup>
@@ -27,20 +24,20 @@ const emit = defineEmits(["update:modelValue"]);
 const props = defineProps({
   textLabel: {
     type: String,
-    default: "",
+    default: ""
   },
   modelValue: {
     type: [String, Number],
-    default: "",
+    default: ""
   },
   value: {
     type: [String, Number],
-    required: true,
-  },
+    required: true
+  }
 });
 
 const state = reactive({
-  uniqueId: "",
+  uniqueId: ""
 });
 const updateInput = ($event) => {
   emit("update:modelValue", $event.target.value);

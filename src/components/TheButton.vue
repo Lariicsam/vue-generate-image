@@ -6,18 +6,18 @@
 <script>
 export default {
   name: "TheButton",
-  inheritAttrs: false,
+  inheritAttrs: false
 };
 </script>
 <script setup>
 const props = defineProps({
   text: {
-    type: String,
+    type: String
   },
   variant: {
     type: String,
-    default: "primary",
-  },
+    default: "primary"
+  }
 });
 
 const emit = defineEmits(["onClick"]);

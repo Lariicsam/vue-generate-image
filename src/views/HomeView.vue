@@ -1,4 +1,3 @@
-
 <template>
   <div class="irow main-head">
     <h1>Generate an Image</h1>
@@ -10,19 +9,17 @@
     <radio-option-group
       :options="[
         { label: 'Select an Existing Model', value: 'option1' },
-        { label: 'Create Your Own', value: 'option2' },
+        { label: 'Create Your Own', value: 'option2' }
       ]"
       name="option"
-      v-model="form.sampleRadio"
-    />
+      v-model="form.sampleRadio" />
   </div>
   <ExistingPersonView />
   <teleport to="body">
     <the-modal
       :showModal="isShow"
       title="Generating Your Image"
-      description="This may take up to a minute."
-    ></the-modal>
+      description="This may take up to a minute."></the-modal>
   </teleport>
   <div class="irow margin--step">
     <the-button text="Generate" @onClick="showModal" />
@@ -38,7 +35,7 @@ import TheModal from "../components/TheModal.vue";
 
 const form = reactive({
   sampleRadio: "",
-  samplePreSelectedRadio: "option2",
+  samplePreSelectedRadio: "option2"
 });
 
 let isShow = ref(false);

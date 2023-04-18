@@ -17,23 +17,23 @@ const navigationData = [
   {
     text: "Generate",
     link: "#",
-    id: "nav1",
+    id: "nav1"
   },
   {
     text: "My Images",
     link: "#",
-    id: "nav2",
+    id: "nav2"
   },
   {
     text: "Favorites",
     link: "#",
-    id: "nav3",
+    id: "nav3"
   },
   {
     text: "Top Creators",
     link: "#",
-    id: "nav4",
-  },
+    id: "nav4"
+  }
 ];
 
 const toggleMenu = () => {

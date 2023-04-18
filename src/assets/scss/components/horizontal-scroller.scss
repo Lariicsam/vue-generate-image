@@ -28,7 +28,7 @@
     }
 
     @include until(1025px) {
-        margin: 0 16px;
+      margin: 0 16px;
     }
 
     @include mobile {

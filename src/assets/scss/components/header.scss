@@ -15,7 +15,6 @@
 
   @include until(900px) {
     grid-template-columns: 64px 1fr 1fr;
-    
   }
 
   @include tablet {
